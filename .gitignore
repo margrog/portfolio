@@ -1,0 +1,3 @@
+/node_modules
+# Don’t ignore build since we are deploying to github pages
+# /build

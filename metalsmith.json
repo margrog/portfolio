@@ -2,6 +2,7 @@
   "source": "src",
   "destination": "build",
   "plugins": {
+    "metalsmith-env": {},
     "metalsmith-markdown": true,
     "metalsmith-permalinks": {
       "relative": false,
