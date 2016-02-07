@@ -1,0 +1,36 @@
+---
+layout: layout.html
+title: Margien Rogaar
+---
+
+<div class="Index-grid">
+  <div class="Grid Grid--gutters">
+    <div class="Grid-cell">
+      <p>Schrijver / Regisseur</p>
+      <h1 id="Index-title">Margien Rogaar</h1>
+      <p>Films over mensen en de dingen die voorbij gaan.</p>
+    </div>
+    <div class="Grid-cell">
+      <div>
+        Margien Rogaar werkt als drama regisseur voor
+        zowel film als televisie. Haar meest recente werk,de
+        kinderfilm Bouwdorp, de jeugdserie Doctor Cheezy en
+        de televisiefilms Bon Voyage werden geselecteerd voor
+        festivals en genomineerd voor verschillende prijzen in
+        binnen-en buitenland. Momenteel werkt ze aan
+        de verfilming van Alleen op de Wereld.
+      </div>
+    </div>
+  </div>
+  <div class="MovieProjects">
+    {{#each collections.projects as |project|}}
+      <div class="ProjectStill" style="background-image:url(images/{{project.still}});">
+        <div class="ProjectStill-container">
+          <h2 class="ProjectStill-title">{{project.title}}</h2>
+          <p class="ProjectStill-subTitle">{{project.date}} | {{project.type}} | {{project.duration}}</p>
+          </div>
+        <div class="ProjectStill-height"></div>
+      </div>
+    {{/each}}
+  </div>
+</div>

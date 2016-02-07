@@ -1,0 +1,42 @@
+{
+  "source": "src",
+  "destination": "build",
+  "plugins": {
+    "metalsmith-markdown": true,
+    "metalsmith-permalinks": {
+      "relative": false,
+      "linksets": [
+        {
+          "match": { "collection": "pages" },
+          "pattern": ":route"
+        }
+      ]
+    },
+    "metalsmith-collections": {
+      "projects": {
+        "sortBy": "date",
+        "reverse": true
+      }
+    },
+    "metalsmith-layouts": {
+      "engine": "handlebars"
+    },
+    "metalsmith-in-place": {
+      "engine": "handlebars"
+    },
+    "metalsmith-serve": {
+      "port": 8888
+    },
+    "metalsmith-watch": {
+      "livereload": true
+    },
+    "metalsmith-postcss": {
+      "plugins": {
+        "autoprefixer": true,
+        "postcss-nested": true,
+        "postcss-color-gray": true
+      },
+      "map": true
+    }
+  }
+}

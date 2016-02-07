@@ -1,0 +1,8 @@
+@custom-media --break-sm (min-width: 384px);
+@custom-media --break-md (min-width: 576px);
+@custom-media --break-lg (min-width: 768px);
+
+@custom-media --high-dppx (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi), (min-resolution: 1.5dppx);
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImN1c3RvbS1tZWRpYS5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsNENBQTRDO0FBQzVDLDRDQUE0QztBQUM1Qyw0Q0FBNEM7O0FBRTVDO3dEQUN3RCIsImZpbGUiOiJjdXN0b20tbWVkaWEuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGN1c3RvbS1tZWRpYSAtLWJyZWFrLXNtIChtaW4td2lkdGg6IDM4NHB4KTtcbkBjdXN0b20tbWVkaWEgLS1icmVhay1tZCAobWluLXdpZHRoOiA1NzZweCk7XG5AY3VzdG9tLW1lZGlhIC0tYnJlYWstbGcgKG1pbi13aWR0aDogNzY4cHgpO1xuXG5AY3VzdG9tLW1lZGlhIC0taGlnaC1kcHB4ICgtd2Via2l0LW1pbi1kZXZpY2UtcGl4ZWwtcmF0aW86IDEuNSksXG4gICAgKG1pbi1yZXNvbHV0aW9uOiAxNDRkcGkpLCAobWluLXJlc29sdXRpb246IDEuNWRwcHgpO1xuIl19 */
