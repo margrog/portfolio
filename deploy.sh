@@ -1,3 +1,7 @@
+# IMPORTANT before running this deploy script
+# Disable the serve and watch plugins. They’ll
+# prevent this script from continuing past
+# the metalsmith command. TODO
 echo "deploying..."
 set -e
 GITURL=`git config remote.origin.url`
