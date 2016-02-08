@@ -24,13 +24,15 @@ title: Margien Rogaar
   </div>
   <div class="MovieProjects">
     {{#each collections.projects as |project|}}
-      <div class="ProjectStill" style="background-image:url(images/{{project.still}});">
-        <div class="ProjectStill-container">
-          <h2 class="ProjectStill-title">{{project.title}}</h2>
-          <p class="ProjectStill-subTitle">{{project.date}} | {{project.type}} | {{project.duration}}</p>
-          </div>
-        <div class="ProjectStill-height"></div>
-      </div>
+      {{#if project.featured}}
+        <div class="ProjectStill" style="background-image:url(images/{{project.still}});">
+          <div class="ProjectStill-container">
+            <h2 class="ProjectStill-title">{{project.title}}</h2>
+            <p class="ProjectStill-subTitle">{{moment project.date lang="nl" format="MMMM YYYY"}} | {{project.type}} | {{project.duration}}</p>
+            </div>
+          <div class="ProjectStill-height"></div>
+        </div>
+      {{/if}}
     {{/each}}
   </div>
 </div>

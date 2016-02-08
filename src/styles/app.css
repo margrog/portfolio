@@ -6,13 +6,13 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
   display: flex;
+  background: gray(240);
 }
 
 .Index {
   &-grid {
-    width: 90%;
+    /*width: 90%;*/
     margin: 0 auto;
-    background: gray(200);
   }
   &-title {
     font-size: 3em;

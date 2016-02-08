@@ -19,17 +19,21 @@
         "reverse": true
       }
     },
+    "metalsmith-register-helpers": {
+      "directory": "src/helpers"
+    },
     "metalsmith-layouts": {
       "engine": "handlebars"
     },
     "metalsmith-in-place": {
-      "engine": "handlebars"
+      "engine": "handlebars",
+      "partials": "src/partials"
     },
     "metalsmith-postcss": {
       "plugins": {
-        "autoprefixer": true,
-        "postcss-nested": true,
-        "postcss-color-gray": true
+        "autoprefixer": {},
+        "postcss-nested": {},
+        "postcss-color-gray": {}
       },
       "map": true
     },
