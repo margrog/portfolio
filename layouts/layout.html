@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>{{title}}</title>
-  <link rel="stylesheet" href="/styles/app.css">
+  <link rel="stylesheet" href="{{#unless ENV_PROD}}/{{/unless}}styles/app.css">
 </head>
 <body>
   {{{contents}}}
