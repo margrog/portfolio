@@ -26,7 +26,7 @@ title: Margien Rogaar
     {{#each collections.projects as |project|}}
       {{#if project.featured}}
         <div class="MovieProject">
-          <div class="ProjectStill" style="background-image:url(images/{{project.still}});">
+          <div class="ProjectStill" style="background-image:url(images/{{project.posterImage}});">
             <div class="ProjectStill-container">
               <h2 class="ProjectStill-title">{{project.title}}</h2>
               <p class="ProjectStill-subTitle">{{moment project.date lang="nl" format="MMMM YYYY"}} | {{project.type}} | {{project.duration}}</p>

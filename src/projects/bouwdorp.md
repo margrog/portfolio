@@ -1,12 +1,18 @@
 ---
-layout: layout.html
+layout: project.html
 collection: projects
 
 title: Bouwdorp
 date: 2013-03-23
 type: Speelfilm
 featured: true
-description: 'Kinderfilm waarin twee beste vrienden
+
+vimeoId: 90102898
+duration: 01:02:00
+posterImage: bouwdorp.png
+---
+
+Kinderfilm waarin twee beste vrienden
 elkaars ergste vijanden worden op een
 huttenbouwdorp. Ziggy en Bas krijgen ruzie
 in de zomer voordat ze naar de
@@ -22,11 +28,4 @@ Vlijmen en Jeroen de Man. Onze
 insteek was een oorlogsfilm te maken voor
 kinderen. Een tragedie die zich afspeelt
 te midden van torenhoge hutten. De
-première vond plaats in januari 2014.'
-
-vimeoId: 90102898
-duration: 01:02:00
-still: bouwdorp.png
----
-
-{{> project this}}
+première vond plaats in januari 2014.

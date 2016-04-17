@@ -1,4 +1,12 @@
-<div class="ProjectDetail-stillContainer">
+<!doctype html>
+<html>
+<head>
+  <title>{{title}}</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{{#unless ENV_PROD}}/{{/unless}}styles/app.css">
+</head>
+<body>
+<div class="ProjectDetail-stillContainer" style="background-image:url(/images/{{posterImage}});">
   {{!-- {{#link-to "projects"}}Terug naar Projecten{{/link-to}} --}}
   {{!-- {{project-still project=project}} --}}
   <h1 class="ProjectDetail-title">{{title}}</h1>
@@ -8,7 +16,7 @@
   <div class="Index-grid">
     <div class="Grid Grid--gutters">
       <div class="Grid-cell">
-        {{description}}
+        {{{contents}}}
       </div>
     </div>
   </div>
@@ -20,3 +28,10 @@
     width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
   </iframe>
 </div>
+
+{{#unless ENV_PROD}}
+  <script src="http://localhost:35729/livereload.js"></script>
+{{/unless}}
+<script src="scripts/index.js"></script>
+</body>
+</html>
