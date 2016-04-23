@@ -3,6 +3,8 @@
 @import 'solved/base/custom-media.css';
 @import 'solved/grid.css';
 
+@import 'icons.css';
+
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -45,23 +47,62 @@ body {
 
 .MovieProject {
   position: relative;
+
   &-height {
     padding-bottom: 56%;
   }
-}
-.Video {
-  /*display: none;*/
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-}
 
-.ModeContainer {
-  height: 56vw;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
+  &-still {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+
+    &Container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &Main {
+      font-size: 3em;
+      margin: 0 0 5px 0;
+      font-weight: normal;
+      color: gray(230);
+      pointer-events: text;
+    }
+
+    &Sub {
+      font-size: 0.8em;
+      color: gray(230);
+      margin: 0;
+      pointer-events: text;
+    }
+  }
+
+  &-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
 }
 
 .MovieControl {
@@ -70,9 +111,9 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  z-index: 3;
+  z-index: 4;
+
   &-noHeight {
-    background-color: gray(80);
     border-radius: 3px;
     display: flex;
     overflow: hidden;
@@ -80,74 +121,36 @@ body {
   &-button {
     height: 100%;
     padding: 8px 14px;
-    -webkit-appearance: none;
-    background: gray(100, 0.9);
-    border: none;
-    font-size: 0.9em;
-    color: gray(245);
+    background-color: transparent;
+    border: medium none;
+
+    appearance: none !important;
+
+    width: 30px;
+    height: 30px;
+
     &:focus {
       outline: none;
       box-shadow: none;
     }
+
     &.is-active {
-      background: gray(0);
+      /*background: gray(0);*/
     }
   }
 }
 
-.Modal {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: gray(240, .7);
-  &-close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
-  &-text {
 
-  }
-}
 
-.ProjectStill {
 
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  cursor: pointer;
-  z-index: 1;
-  &-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  &-title {
-    font-size: 3em;
-    margin: 0 0 5px 0;
-    font-weight: normal;
-    color: gray(230);
-  }
 
-  &-subTitle {
-    font-size: 0.8em;
-    color: gray(230);
-    margin: 0;
-  }
-}
+
+
+
+
+
+
 
 .ProjectDetail {
   &-stillContainer {

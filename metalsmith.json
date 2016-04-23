@@ -33,7 +33,9 @@
       "plugins": {
         "autoprefixer": {},
         "postcss-nested": {},
-        "postcss-color-gray": {}
+        "postcss-color-gray": {},
+        "postcss-custom-properties": {},
+        "postcss-calc": {}
       },
       "map": true
     },

@@ -1,0 +1,29 @@
+:root {
+  --iconSize: 30px;
+}
+
+.Icon {
+  background-image: url(/images/Icons.svg);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  &-play {
+    background-position: 0 0;
+  }
+
+  &--pause {
+    background-position: -calc(var(--iconSize) * 1) 0;
+  }
+
+  &--fullscreenEnter {
+    background-position: -calc(var(--iconSize) * 2) 0;
+  }
+
+  &--fullscreenExit {
+    background-position: -calc(var(--iconSize) * 3) 0;
+  }
+
+  &--text {
+    background-position: -calc(var(--iconSize) * 4) 0;
+  }
+}
