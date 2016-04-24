@@ -14,7 +14,7 @@
       ]
     },
     "metalsmith-collections": {
-      "projects": {
+      "filmografie": {
         "sortBy": "date",
         "reverse": true
       }
@@ -23,11 +23,11 @@
       "directory": "src/helpers"
     },
     "metalsmith-layouts": {
-      "engine": "handlebars"
+      "engine": "handlebars",
+      "partials": "partials"
     },
     "metalsmith-in-place": {
-      "engine": "handlebars",
-      "partials": "src/partials"
+      "engine": "handlebars"
     },
     "metalsmith-postcss": {
       "plugins": {

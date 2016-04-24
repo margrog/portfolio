@@ -1,7 +1,7 @@
 ---
 layout: project.html
-collection: projects
-route: bouwdorp
+collection: filmografie
+route: /filmografie/bouwdorp
 
 title: Bouwdorp
 date: 2013-03-23
