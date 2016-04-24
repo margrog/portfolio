@@ -48,8 +48,8 @@ title: Margien Rogaar
         <div class="Grid-cell">
           <ul>
             <li><a href="/">Selectie</a></li>
-            <li><a href="/filmography">Filmografie</a></li>
-            <li><a href="/biography">Biografie</a></li>
+            <li><a href="/filmografie">Filmografie</a></li>
+            <li><a href="/biografie">Biografie</a></li>
           </ul>
         </div>
       </div>
@@ -64,7 +64,7 @@ title: Margien Rogaar
     {{#each collections.projects as |project|}}
       {{#if project.featured}}
         <div class="MovieProject" data-vimeo-id="{{vimeoId}}" id="MovieProject-{{vimeoId}}">
-          <div class="MovieProject-still" style="background-image:url(/images/{{project.posterImage}});"></div>
+          <div class="MovieProject-still" style="background-image:url(../images/{{project.posterImage}});"></div>
           <div class="MovieProject-video">
             <iframe
               class="MovieProject-vimeoIframe"
