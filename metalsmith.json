@@ -31,11 +31,8 @@
     },
     "metalsmith-postcss": {
       "plugins": {
-        "autoprefixer": {},
-        "postcss-nested": {},
-        "postcss-color-gray": {},
-        "postcss-custom-properties": {},
-        "postcss-calc": {}
+        "postcss-import": {},
+        "postcss-cssnext": {}
       },
       "map": true
     },

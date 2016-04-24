@@ -1,9 +1,14 @@
 /* Solved */
-@import 'normalize.css';
-@import 'solved/base/custom-media.css';
-@import 'solved/grid.css';
+@import "solved/base/variables.css";
+@import "solved/base/custom-media.css";
+@import "solved/base/elements.css";
 
-@import 'font.css';
-@import 'icons.css';
-@import 'project.css';
-@import 'index.css';
+@import "normalize.css";
+@import "solved/base/custom-media.css";
+@import "solved/components/grid.css";
+@import "solved/utils/media.css";
+
+@import "font.css";
+@import "icons.css";
+@import "project.css";
+@import "index.css";

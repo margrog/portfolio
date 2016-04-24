@@ -1,6 +1,4 @@
-:root {
-  --iconSize: 30px;
-}
+@import 'variables.css';
 
 .Icon {
   mask-image: url(/images/Icons.svg);

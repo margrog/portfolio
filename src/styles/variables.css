@@ -1,0 +1,35 @@
+@import './solved/base/custom-media';
+
+:root {
+  --break-sm: 384px;
+  --break-md: 576px;
+  --break-lg: 768px;
+  --defaultTextColor: gray(230);
+  --iconSize: 30px;
+}
+
+.u-hide,
+.u-sm-hide {
+  display: none;
+}
+
+@media (--break-sm) {
+  .u-hide {
+    display: inherit;
+  }
+  .u-sm-hide {
+    display: none;
+  }
+}
+@media (--break-md) {
+  .u-hide,
+  .u-sm-hide {
+    display: inherit;
+  }
+}
+@media (--break-lg) {
+  .u-hide,
+  .u-sm-hide {
+    display: inherit;
+  }
+}
