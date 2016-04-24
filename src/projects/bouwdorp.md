@@ -10,7 +10,7 @@ featured: true
 
 vimeoId: 90102898
 duration: 01:02:00
-posterImage: bouwdorp.png
+posterImage: bouwdorp.jpg
 ---
 Kinderfilm waarin twee beste vrienden
 elkaars ergste vijanden worden op een

@@ -1,0 +1,211 @@
+:root {
+  --defaultTextColor: gray(230);
+}
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  background: gray(240);
+  font-size: 10px;
+}
+
+.Index {
+  width: 100%;
+  &-header {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 65vh;
+    height: calc(100vh / 1.61803398875);
+    max-height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-Hello {
+
+  }
+  &-author {
+    line-height: 1;
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: normal;
+    color: gray(160);
+    font-size: 1.6em;
+
+    font-family: "margien300", Times, serif;
+    font-size: 2.5em;
+    line-height: 1;
+
+    @media(min-width: 550px) {
+      /*font-size: 1.8em;*/
+      font-size: 2.5em;
+    }
+  }
+  &-title {
+    line-height: 0.9;
+    margin: 0;
+    font-weight: normal;
+    font-size: 5em;
+    @media(min-width: 550px) {
+      font-size: 7em;
+    }
+
+  }
+  &-subTitle {
+    font-weight: lighter;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.6em;
+    font-style: italic;
+    color: gray(160);
+    margin: 10px 0 0 0;
+
+    margin: 18px 0 0 0;
+    font-family: margien300, Times, serif;
+    font-size: 2.5em;
+    line-height: 0.8;
+
+    @media(min-width: 550px) {
+      /*font-size: 2em;*/
+      font-size: 2.5em;
+    }
+  }
+  &-introduction {
+    font-size: 1.4em;
+    line-height: 1.4;
+    color: gray(160);
+
+    font-family: margien300, Times, serif;
+    font-size: 2.4em;
+    line-height: 1.2;
+  }
+  &-details {
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: gray(160);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+      /*margin: 0;*/
+      > a {
+        text-decoration: none;
+        color: gray(160);
+      }
+    }
+  }
+}
+
+.MovieProjects {
+  display: flex;
+  flex-direction: column;
+}
+
+.MovieProject {
+  position: relative;
+  width: 100%;
+
+  &-height {
+    padding-bottom: 56%;
+  }
+
+  &-still {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  &-title {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+
+    &Container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &Main {
+      font-size: 6em;
+      margin: 0 0 0px 0;
+      font-weight: normal;
+      color: var(--defaultTextColor);
+      pointer-events: text;
+    }
+
+    &Sub {
+      font-size: 1.4em;
+      color: var(--defaultTextColor);
+      margin: 0;
+      pointer-events: text;
+
+      font-family: margien300, Times, serif;
+      font-size: 2.4em;
+      line-height: 1.2;
+    }
+  }
+
+  &-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}
+
+.MovieControl {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 60px;
+  z-index: 2147483648; /*webkit fullscreen + 1*/
+
+  &-noHeight {
+    position: relative;
+    border-radius: 3px;
+    display: flex;
+    height: 0;
+  }
+  &-button {
+    height: 100%;
+    padding: 8px 14px;
+    background-color: var(--defaultTextColor);
+    border: medium none;
+    padding: 0;
+
+    appearance: none !important;
+
+    width: 30px;
+    height: 30px;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+
+    &.is-active {
+      /*background: gray(0);*/
+    }
+  }
+  &-divider {
+    width: 1px;
+    height: 30px;
+    background: gray(255,0.6);
+    margin: 0 10px;
+  }
+}
