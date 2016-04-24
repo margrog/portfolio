@@ -1,6 +1,7 @@
 ---
 layout: project.html
 collection: projects
+route: bouwdorp
 
 title: Bouwdorp
 date: 2013-03-23
@@ -11,7 +12,6 @@ vimeoId: 90102898
 duration: 01:02:00
 posterImage: bouwdorp.png
 ---
-
 Kinderfilm waarin twee beste vrienden
 elkaars ergste vijanden worden op een
 huttenbouwdorp. Ziggy en Bas krijgen ruzie
@@ -29,3 +29,7 @@ insteek was een oorlogsfilm te maken voor
 kinderen. Een tragedie die zich afspeelt
 te midden van torenhoge hutten. De
 première vond plaats in januari 2014.
+
+- Regie: **Me**
+- Camera: Him
+- Site: Timo

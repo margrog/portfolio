@@ -3,51 +3,90 @@ layout: layout.html
 title: Margien Rogaar
 ---
 
-<div class="Index-grid">
-  <div class="Grid Grid--gutters">
-    <div class="Grid-cell">
-      <p>Schrijver / Regisseur</p>
-      <h1 id="Index-title">Margien Rogaar</h1>
-      <p>Films over mensen en de dingen die voorbij gaan.</p>
-    </div>
-    <div class="Grid-cell">
-      <div>
-        Margien Rogaar werkt als drama regisseur voor
-        zowel film als televisie. Haar meest recente werk,de
-        kinderfilm Bouwdorp, de jeugdserie Doctor Cheezy en
-        de televisiefilms Bon Voyage werden geselecteerd voor
-        festivals en genomineerd voor verschillende prijzen in
-        binnen-en buitenland. Momenteel werkt ze aan
-        de verfilming van Alleen op de Wereld.
+<div class="Index">
+  <div class="Index-header">
+    <div class="Hello">
+
+      <div class="Grid Grid--gutters">
+        <div class="Grid-cell">
+          <p class="Index-author">Schrijver / Regisseur</p>
+          <h1 class="Index-title">Margien<br />Rogaar</h1>
+          <h2 class="Index-subTitle">Films over mensen en de<br />dingen die voorbij gaan.</h2>
+        </div>
+        <div class="Grid-cell">
+          <p class="Index-introduction">
+            Margien Rogaar werkt als drama regisseur voor
+            zowel film als televisie. Haar meest recente werk,de
+            kinderfilm Bouwdorp, de jeugdserie Doctor Cheezy en
+            de televisiefilms Bon Voyage werden geselecteerd voor
+            festivals en genomineerd voor verschillende prijzen in
+            binnen-en buitenland. Momenteel werkt ze aan
+            de verfilming van Alleen op de Wereld.
+          </p>
+        </div>
+      </div>
+      <div class="Grid Grid--gutters">
+        <div class="Grid-cell"></div>
+        <div class="Grid-cell"></div>
+        <div class="Grid-cell">
+          <ul class="Index-details">
+            <li><b>Contact</b></li>
+            <li><a href="mailto:post@margienrogaar.nl">post@margienrogaar.nl</a></li>
+          </ul>
+        </div>
+        <div class="Grid-cell">
+          <ul class="Index-details">
+            <li><b>Agent</b></li>
+            <li>Vanessa Henneman</li>
+            <li><a href="http://hennemanagency.nl">hennemanagency.nl</a></li>
+            <li>020 69 433 99</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="Grid Grid--gutters">
+        <div class="Grid-cell">
+          <ul>
+            <li><a href="/">Selectie</a></li>
+            <li><a href="/filmography">Filmografie</a></li>
+            <li><a href="/biography">Biografie</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+
+
+
+
+
   <div class="MovieProjects">
     {{#each collections.projects as |project|}}
       {{#if project.featured}}
         <div class="MovieProject" data-vimeo-id="{{vimeoId}}" id="MovieProject-{{vimeoId}}">
-          <div class="MovieProject-still" style="background-image:url(images/{{project.posterImage}});"></div>
+          <div class="MovieProject-still" style="background-image:url(/images/{{project.posterImage}});"></div>
           <div class="MovieProject-video">
             <iframe
               class="MovieProject-vimeoIframe"
               id="vimeoplayer{{vimeoId}}"
-              src="https://player.vimeo.com/video/{{vimeoId}}?color=236821&title=0&byline=0&portrait=0&autoplay=1&api=1&player_id=vimeoplayer{{vimeoId}}"
+              src="https://player.vimeo.com/video/{{vimeoId}}?color=236821&title=0&byline=0&portrait=0&autoplay=0&api=1&player_id=vimeoplayer{{vimeoId}}"
               width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
             </iframe>
           </div>
           <div class="MovieProject-title">
             <div class="MovieProject-titleContainer">
-              <h2 class="MovieProject-titleMain">{{project.title}}</h2>
-              <p class="MovieProject-titleSub">{{moment project.date lang="nl" format="MMMM YYYY"}} | {{project.type}} | {{project.duration}}</p>
+              <h2 class="MovieProject-titleMain" style="color:{{project.titleColor}};">{{project.title}}</h2>
+              <p class="MovieProject-titleSub" style="color:{{project.titleColor}};">{{moment project.date lang="nl" format="MMMM YYYY"}} | {{project.type}} | {{project.duration}}</p>
             </div>
           </div>
           <div class="MovieControl">
             <div class="MovieControl-noHeight">
-              <button class="MovieControl-button Icon Icon--play"></button>
-              <button class="MovieControl-button Icon Icon--text"></button>
-
-              <button class="MovieControl-button Icon Icon--pause"></button>
-              <button class="MovieControl-button Icon Icon--fullscreenEnter"></button>
+              <button class="MovieControl-button Icon Icon--play" {{#if project.titleColor}}style="background-color:{{project.titleColor}};"{{/if}}></button>
+              <button class="MovieControl-button Icon Icon--pause" {{#if project.titleColor}}style="background-color:{{project.titleColor}};"{{/if}}></button>
+              <div class="MovieControl-divider" {{#if project.titleColor}}style="background-color:{{project.titleColor}};"{{/if}}></div>
+              <a href="/projects/{{route}}/#tekst" class="MovieControl-button Icon Icon--text" {{#if project.titleColor}}style="background-color:{{project.titleColor}};"{{/if}}></a>
+              <button class="MovieControl-button Icon Icon--fullscreenEnter" {{#if project.titleColor}}style="background-color:{{project.titleColor}};"{{/if}}></button>
+              <button class="MovieControl-button Icon Icon--fullscreenExit" {{#if project.titleColor}}style="background-color:{{project.titleColor}};"{{/if}}></button>
             </div>
           </div>
           <div class="MovieProject-height"></div>

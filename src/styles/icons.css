@@ -3,7 +3,9 @@
 }
 
 .Icon {
-  background-image: url(/images/Icons.svg);
+  mask-image: url(/images/Icons.svg);
+  mask-size: cover;
+  background-color: #000;
   background-size: auto 100%;
   background-repeat: no-repeat;
 
@@ -13,17 +15,21 @@
 
   &--pause {
     background-position: -calc(var(--iconSize) * 1) 0;
+    mask-position: -calc(var(--iconSize) * 1) 0;
   }
 
   &--fullscreenEnter {
     background-position: -calc(var(--iconSize) * 2) 0;
+    mask-position: -calc(var(--iconSize) * 2) 0;
   }
 
   &--fullscreenExit {
     background-position: -calc(var(--iconSize) * 3) 0;
+    mask-position: -calc(var(--iconSize) * 3) 0;
   }
 
   &--text {
     background-position: -calc(var(--iconSize) * 4) 0;
+    mask-position: -calc(var(--iconSize) * 4) 0;
   }
 }

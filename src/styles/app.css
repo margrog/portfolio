@@ -3,38 +3,104 @@
 @import 'solved/base/custom-media.css';
 @import 'solved/grid.css';
 
+@import 'font.css';
 @import 'icons.css';
-
+@import 'project.css';
+:root {
+  --defaultTextColor: gray(230);
+}
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
-  display: flex;
   background: gray(240);
+  font-size: 10px;
 }
 
 .Index {
-  &-grid {
-    /*width: 90%;*/
+  width: 100%;
+  &-header {
+    max-width: 1024px;
     margin: 0 auto;
+    padding: 20px;
+    height: 65vh;
+    height: calc(100vh / 1.61803398875);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-Hello {
+
+  }
+  &-author {
+    line-height: 1;
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-weight: normal;
+    color: gray(160);
+    font-size: 1.6em;
+
+    font-family: "margien300", Times, serif;
+    font-size: 2.5em;
+    line-height: 1;
+
+    @media(min-width: 550px) {
+      /*font-size: 1.8em;*/
+      font-size: 2.5em;
+    }
   }
   &-title {
-    font-size: 3em;
+    line-height: 0.9;
+    margin: 0;
+    font-weight: normal;
+    font-size: 5em;
+    @media(min-width: 550px) {
+      font-size: 7em;
+    }
+
   }
-}
+  &-subTitle {
+    font-weight: lighter;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.6em;
+    font-style: italic;
+    color: gray(160);
+    margin: 10px 0 0 0;
 
-.Application {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  overflow: auto;
-  background: gray(230);
+    margin: 18px 0 0 0;
+    font-family: margien300, Times, serif;
+    font-size: 2.5em;
+    line-height: 0.8;
 
-  &-outlet {
-    margin-top: 40px;
-    width: 100%;
-    max-width: 1400px;
-    background: gray(230);
+    @media(min-width: 550px) {
+      /*font-size: 2em;*/
+      font-size: 2.5em;
+    }
+  }
+  &-introduction {
+    font-size: 1.4em;
+    line-height: 1.4;
+    color: gray(160);
+
+    font-family: margien300, Times, serif;
+    font-size: 2.4em;
+    line-height: 1.2;
+  }
+  &-details {
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: gray(160);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    > li {
+      /*margin: 0;*/
+      > a {
+        text-decoration: none;
+        color: gray(160);
+      }
+    }
   }
 }
 
@@ -43,10 +109,9 @@ body {
   flex-direction: column;
 }
 
-
-
 .MovieProject {
   position: relative;
+  width: 100%;
 
   &-height {
     padding-bottom: 56%;
@@ -82,18 +147,22 @@ body {
     }
 
     &Main {
-      font-size: 3em;
-      margin: 0 0 5px 0;
+      font-size: 6em;
+      margin: 0 0 0px 0;
       font-weight: normal;
-      color: gray(230);
+      color: var(--defaultTextColor);
       pointer-events: text;
     }
 
     &Sub {
-      font-size: 0.8em;
-      color: gray(230);
+      font-size: 1.4em;
+      color: var(--defaultTextColor);
       margin: 0;
       pointer-events: text;
+
+      font-family: margien300, Times, serif;
+      font-size: 2.4em;
+      line-height: 1.2;
     }
   }
 
@@ -107,22 +176,25 @@ body {
 
 .MovieControl {
   position: absolute;
-  bottom: 12%;
+  top: 50%;
   display: flex;
   justify-content: center;
   width: 100%;
-  z-index: 4;
+  margin-top: 60px;
+  z-index: 2147483648; /*webkit fullscreen + 1*/
 
   &-noHeight {
+    position: relative;
     border-radius: 3px;
     display: flex;
-    overflow: hidden;
+    height: 0;
   }
   &-button {
     height: 100%;
     padding: 8px 14px;
-    background-color: transparent;
+    background-color: var(--defaultTextColor);
     border: medium none;
+    padding: 0;
 
     appearance: none !important;
 
@@ -138,35 +210,10 @@ body {
       /*background: gray(0);*/
     }
   }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-.ProjectDetail {
-  &-stillContainer {
-
-
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  &-title {
-    color: gray(230);
-    font-weight: normal;
-    margin: 0 0 10px 0;
-    font-size: 3em;
-  }
-  &-subTitle {
-    color: gray(230);
+  &-divider {
+    width: 1px;
+    height: 30px;
+    background: gray(255,0.6);
+    margin: 0 10px;
   }
 }
